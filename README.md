@@ -1,6 +1,7 @@
 # Moveit1_Tutorials
 A Tutorial for moveit install on ROS noetic. 
 In this tutorial some unconventional ROS tools (like 'catkin build') shall be used. If you're not experienced with ROS system, I'd suggest reinstalling your whole operating system to start with a clean slate. The required OS is Ubuntu 20.04 LTS.
+### 1. ROS Noetic setup
 First of all, add an entry to your sources list.
 
 ```
@@ -72,6 +73,8 @@ source ~/.bashrc
 
 **IMPORTANT. from now on every time you build your workspace ONLY 'catkin build' may be used. It REPLACES conventional 'catkin_make' and 'catkin_make_isolated'**
 
+### 1. Moveit1 installation
+
 Now lets get down to Moveit installation. Just to verify you have everuthing ready run all theese commands. 
 
 ```
@@ -127,6 +130,9 @@ roslaunch panda_moveit_config demo.launch rviz_tutorial:=true
 
 For further instrunctions refer to Moveit official documentation: https://ros-planning.github.io/moveit_tutorials/
 Please report any incensistencies in this tutorual to me via email.
+
+### 1. Troubleshooting
+
 
 
 
