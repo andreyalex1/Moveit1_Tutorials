@@ -71,11 +71,11 @@ echo 'source ~/ws_moveit/devel/setup.bash' >> ~/.bashrc
 source ~/.bashrc
 ```
 
-**IMPORTANT. from now on every time you build your workspace ONLY 'catkin build' may be used. It REPLACES conventional 'catkin_make' and 'catkin_make_isolated'**
+**IMPORTANT. from now on every time you build your workspace ONLY 'catkin build' may be used. It REPLACES conventional 'catkin_make' and 'catkin_make_isolated'.**
 
-### 1. Moveit1 installation
+### 2. Moveit1 installation
 
-Now lets get down to Moveit installation. Just to verify you have everuthing ready run all theese commands. 
+Now lets get down to Moveit installation. To verify you have everything is ready, run all theese commands. 
 
 ```
 rosdep update
@@ -114,7 +114,7 @@ cd ~/catkin_ws
 rosdep install -y --from-paths . --ignore-src --rosdistro noetic
 ```
 
-Finally, build all packages. Build will take some time. If for some reason build fails with an error 'certain package not found', refer to 'Troubleshooting[2]' section.
+Finally, build all packages. Build will take some time. If for some reason build fails with an error 'Could not find a package configuration file provided by ...', refer to 'Troubleshooting[2]' section.
 
 ```
 cd ~/catkin_ws
@@ -131,9 +131,20 @@ roslaunch panda_moveit_config demo.launch rviz_tutorial:=true
 For further instrunctions refer to Moveit official documentation: https://ros-planning.github.io/moveit_tutorials/
 Please report any incensistencies in this tutorual to me via email.
 
-### 1. Troubleshooting
+### 3. Troubleshooting
+1. Command 'catkin' is not found. Install it with
 
+```
+sudo apt install ros-noetic-catkin python3-catkin-tools python3-osrf-pycommon
+```
 
+2. Some packages required by 'catkin build' are not installed. The simplest solution is just to install the missing package  with 
 
+```
+apt get ros-noetic-package-name
+```
+where package-name is a name of the package with whitespaces and underscores replaced by dashes. If that does not work thry to download the missing package from source like descried here (https://github.com/tuw-robotics/tuw_marker_detection/issues/4)
+
+3. On WSL2 there's a bug with manipulator not showing in RVIZ. Collisons are rendering correctly though. It is currently veing investigated.
 
 
