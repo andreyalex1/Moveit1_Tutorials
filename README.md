@@ -67,7 +67,7 @@ catkin build
 To finish initialization of your workspace add a source command to bashrc file 
 
 ```
-echo 'source ~/ws_moveit/devel/setup.bash' >> ~/.bashrc
+echo 'source ~/catkin_ws/devel/setup.bash' >> ~/.bashrc
 source ~/.bashrc
 ```
 
