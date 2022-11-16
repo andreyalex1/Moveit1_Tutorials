@@ -3,9 +3,9 @@ A Tutorial for moveit install on ROS noetic.
 In this tutorial some unconventional ROS tools (like 'catkin build') shall be used. If you're not experienced with ROS system, I'd suggest reinstalling your whole operating system to start with a clean slate. The required OS is Ubuntu 20.04 LTS.
 First of all, add an entry to your sources list.
 
-'''
+```
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
-'''
+```
 
 Set up your keys
 
