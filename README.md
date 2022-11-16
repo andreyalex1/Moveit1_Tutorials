@@ -129,7 +129,7 @@ roslaunch panda_moveit_config demo.launch rviz_tutorial:=true
 ```
 
 For further instrunctions refer to Moveit official documentation: https://ros-planning.github.io/moveit_tutorials/
-Please report any incensistencies in this tutorual to me via email.
+Please report any inconsistensies in this tutorual to me via email.
 
 ### 3. Troubleshooting
 1. Command 'catkin' is not found. Install it with
